@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      use-new-id-generator-mappings: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDB53Dialect
+  cloud:
+    gcp:
+      sql:
+        instance-connection-name: fe-papicella:australia-southeast1:mydb-mysql
+        database-name: employees
+  datasource:
+    initialization-mode: always
+    hikari:
+      maximum-pool-size: 1
+      password: welcome1
